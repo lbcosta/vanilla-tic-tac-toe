@@ -17,17 +17,30 @@
 }
 
 #app {
-  .tictactoe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 98vh;
+
+  .title {
+    h1 {
+      font-size: 65px;
+      padding: 10px;
+    }
+  }
+
+  .board {
     margin: 0 auto;
     border: none;
     border-collapse: collapse;
     user-select: none;
 
     td {
-      width: 100px;
-      height: 100px;
+      width: 140px;
+      height: 140px;
       text-align: center;
-      font-size: 80px;
+      font-size: 90px;
     }
   }
 }

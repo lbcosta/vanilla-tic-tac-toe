@@ -1,4 +1,4 @@
-const gameCells = document.querySelectorAll(".tictactoe td");
+const gameCells = document.querySelectorAll(".board td");
 const winnerBanner = document.querySelector(".winner");
 const reloadTime = 1000;
 
