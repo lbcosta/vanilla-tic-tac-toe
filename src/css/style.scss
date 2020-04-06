@@ -1,0 +1,68 @@
+@mixin borders($top: false, $right: false, $bottom: false, $left: false) {
+  @if $top {
+    border-top: 1px solid black;
+  }
+
+  @if $bottom {
+    border-bottom: 1px solid black;
+  }
+
+  @if $right {
+    border-right: 1px solid black;
+  }
+
+  @if $left {
+    border-left: 1px solid black;
+  }
+}
+
+#app {
+  .tictactoe {
+    margin: 0 auto;
+    border: none;
+    border-collapse: collapse;
+    user-select: none;
+
+    td {
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      font-size: 80px;
+    }
+  }
+}
+
+.p00 {
+  @include borders($right: true, $bottom: true);
+}
+.p01 {
+  @include borders($left: true, $right: true, $bottom: true);
+}
+.p02 {
+  @include borders($left: true, $bottom: true);
+}
+.p10 {
+  @include borders($top: true, $right: true, $bottom: true);
+}
+.p11 {
+  @include borders($top: true, $right: true, $bottom: true, $left: true);
+}
+.p12 {
+  @include borders($top: true, $bottom: true, $left: true);
+}
+.p20 {
+  @include borders($top: true, $right: true);
+}
+.p21 {
+  @include borders($top: true, $right: true, $left: true);
+}
+.p22 {
+  @include borders($top: true, $left: true);
+}
+
+.winner {
+  height: 200px;
+  font-size: 80px;
+  color: red;
+  text-align: center;
+}
