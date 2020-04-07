@@ -11,7 +11,6 @@
     <video autoplay muted loop id="video">
       <source src="./assets/video/galaxy.mp4" type="video/mp4" />
     </video>
-
     <div id="app">
       <div class="title">
         <h1>Tic Tac Toe</h1>
@@ -37,7 +36,27 @@
       <p class="winner"></p>
     </div>
 
-    <script src="../src/js/Game.js"></script>
-    <script src="../src/js/index.js"></script>
+    <audio class="game-audio" controls autoplay loop id="game-song">
+      <source src="./assets/audio/synthwave-rider.mp3" type="audio/mp3" />
+    </audio>
+
+    <audio class="game-audio" id="player-x-audio">
+      <source src="./assets/audio/player-x.wav" type="audio/wav" />
+    </audio>
+
+    <audio class="game-audio" id="player-o-audio">
+      <source src="./assets/audio/player-o.wav" type="audio/wav" />
+    </audio>
+
+    <audio class="game-audio" id="win-audio">
+      <source src="./assets/audio/win.mp3" type="audio/mp3" />
+    </audio>
+
+    <audio class="game-audio" id="draw-audio">
+      <source src="./assets/audio/draw.wav" type="audio/wav" />
+    </audio>
   </body>
+
+  <script src="../src/js/Game.js"></script>
+  <script src="../src/js/index.js"></script>
 </html>
