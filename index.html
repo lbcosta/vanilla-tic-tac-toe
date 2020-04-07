@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0ff" />
-    <link rel="stylesheet" href="../src/css/style.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
     <link
       rel="shortcut icon"
       href="./assets/image/sun.png"
@@ -14,7 +14,7 @@
   </head>
   <body>
     <video autoplay muted loop id="video">
-      <source src="./assets/video/galaxy.mp4" type="video/mp4" />
+      <source src="./public/video/galaxy.mp4" type="video/mp4" />
     </video>
     <div id="app">
       <div class="title">
@@ -42,26 +42,26 @@
     </div>
 
     <audio class="game-audio" controls autoplay loop id="game-song">
-      <source src="./assets/audio/synthwave-rider.mp3" type="audio/mp3" />
+      <source src="./public/audio/synthwave-rider.mp3" type="audio/mp3" />
     </audio>
 
     <audio class="game-audio" id="player-x-audio">
-      <source src="./assets/audio/player-x.wav" type="audio/wav" />
+      <source src="./public/audio/player-x.wav" type="audio/wav" />
     </audio>
 
     <audio class="game-audio" id="player-o-audio">
-      <source src="./assets/audio/player-o.wav" type="audio/wav" />
+      <source src="./public/audio/player-o.wav" type="audio/wav" />
     </audio>
 
     <audio class="game-audio" id="win-audio">
-      <source src="./assets/audio/win.mp3" type="audio/mp3" />
+      <source src="./public/audio/win.mp3" type="audio/mp3" />
     </audio>
 
     <audio class="game-audio" id="draw-audio">
-      <source src="./assets/audio/draw.wav" type="audio/wav" />
+      <source src="./public/audio/draw.wav" type="audio/wav" />
     </audio>
   </body>
 
-  <script type="text/javascript" src="../src/js/Game.js"></script>
-  <script type="text/javascript" src="../src/js/index.js"></script>
+  <script type="text/javascript" src="./src/js/Game.js"></script>
+  <script type="text/javascript" src="./src/js/index.js"></script>
 </html>
