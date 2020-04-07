@@ -56,20 +56,36 @@ class Game {
   winByRightX = (board, player) =>
     board[0][2] === player && board[1][1] === player && board[2][0] === player;
 
+  draw = (board) => {
+    let hasEmptyCell = false;
+    board.forEach((row) => {
+      row.forEach((cell) => {
+        if (cell === "") {
+          hasEmptyCell = true;
+        }
+      });
+    });
+    return !hasEmptyCell;
+  };
+
   checkGame = () => {
-    if (
-      this.winByFirstRow(this.board, this.actualPlayer) ||
-      this.winBySecondRow(this.board, this.actualPlayer) ||
-      this.winByThirdRow(this.board, this.actualPlayer) ||
-      this.winByFirstColumn(this.board, this.actualPlayer) ||
-      this.winBySecondColumn(this.board, this.actualPlayer) ||
-      this.winByThirdColumn(this.board, this.actualPlayer) ||
-      this.winByLeftX(this.board, this.actualPlayer) ||
-      this.winByRightX(this.board, this.actualPlayer)
-    ) {
-      this.winner = this.actualPlayer;
+    if (this.draw(this.board)) {
+      this.winner = "DRAW! Nobody";
     } else {
-      this.togglePlayer();
+      if (
+        this.winByFirstRow(this.board, this.actualPlayer) ||
+        this.winBySecondRow(this.board, this.actualPlayer) ||
+        this.winByThirdRow(this.board, this.actualPlayer) ||
+        this.winByFirstColumn(this.board, this.actualPlayer) ||
+        this.winBySecondColumn(this.board, this.actualPlayer) ||
+        this.winByThirdColumn(this.board, this.actualPlayer) ||
+        this.winByLeftX(this.board, this.actualPlayer) ||
+        this.winByRightX(this.board, this.actualPlayer)
+      ) {
+        this.winner = this.actualPlayer;
+      } else {
+        this.togglePlayer();
+      }
     }
 
     return this.winner;

@@ -12,7 +12,7 @@ const handleClick = ({ target }) => {
     const hasGameEnded = TicTacToe.checkGame();
 
     if (hasGameEnded) {
-      winnerBanner.textContent = `${TicTacToe.actualPlayer} wins!`;
+      winnerBanner.textContent = `${TicTacToe.winner} wins!`;
       setTimeout(() => {
         winnerBanner.textContent = "";
         TicTacToe.resetGame();
