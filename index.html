@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="./src/css/style.css" />
     <link
       rel="shortcut icon"
-      href="./assets/image/sun.png"
+      href="./public/image/sun.png"
       type="image/x-icon"
     />
     <title>Tic Tac Toe</title>
   </head>
   <body>
+    <audio class="game-audio" controls loop id="game-song">
+      <source src="./public/audio/game-song.mp3" type="audio/mp3" />
+    </audio>
     <video autoplay muted loop id="video">
       <source src="./public/video/galaxy.mp4" type="video/mp4" />
     </video>
@@ -40,10 +43,6 @@
       </table>
       <p class="winner"></p>
     </div>
-
-    <audio class="game-audio" controls autoplay loop id="game-song">
-      <source src="./public/audio/synthwave-rider.mp3" type="audio/mp3" />
-    </audio>
 
     <audio class="game-audio" id="player-x-audio">
       <source src="./public/audio/player-x.wav" type="audio/wav" />

@@ -1,5 +1,6 @@
 const gameSong = document.querySelector("#game-song");
 gameSong.volume = 0.3;
+gameSong.play();
 const playerXAudio = document.querySelector("#player-x-audio");
 playerXAudio.volume = 0.3;
 const playerOAudio = document.querySelector("#player-o-audio");
